@@ -1,4 +1,5 @@
+import { ProductCard } from "./components/ProductCard";
 function App() {
-  return <div>Hello world</div>
+  return <div><ProductCard/></div>
 }
  export default App;
