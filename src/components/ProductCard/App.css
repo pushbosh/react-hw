@@ -1,0 +1,25 @@
+.product{
+    border: solid white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 320px;
+    height: 468px;
+    box-shadow: 0px 0px 21px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.images{
+    width:320px;
+    height: 275px;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+.boton{
+    color: black;
+    background-color: greenyellow;
+    border: unset;
+    border-radius: 7px;
+    width: 25%;
+    height: 40px;
+}

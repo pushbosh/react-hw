@@ -1,5 +1,15 @@
-export function ProductCard(){
+import "./App.css";
+export function ProductCard(props){
+
+   const {image,category,name,price} = props.data 
     return(
-        <div>Product Card</div>
+        <div class="product">
+            <img class = "images" src={image} alt="" />
+            <span>{category}</span>
+            <h4>{name}</h4>
+            <div class = "price">
+            <span class = "price-label">${price}</span><button class = "boton"> Buy Now</button>
+            </div>
+        </div>
     );
 }
