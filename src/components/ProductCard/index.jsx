@@ -3,7 +3,6 @@ export function ProductCard(props){
 
    const {image,category,title,price} = props.data 
     return(
-        <div class = "container">
         <div class="product">
             <img class = "images" src={image} alt="" />
             <span>{category}</span>
@@ -11,7 +10,6 @@ export function ProductCard(props){
             <div class = "price">
             <span class = "price-label">${price}</span><button class = "boton"> Buy Now</button>
             </div>
-        </div>
         </div>
     );
 }
