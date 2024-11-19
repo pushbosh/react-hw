@@ -1,25 +1,55 @@
-.product{
+.container {
+    display: grid; /* Используем сетку */
+    grid-template-columns: repeat(3, 1fr); /* Три столбца */
+    gap: 20px; /* Отступы между карточками */
+    max-width: 1200px; /* Ограничим ширину контейнера */
+    margin: 0 auto; /* Центрируем на странице */
+    padding: 20px; /* Внутренний отступ */
+    box-sizing: border-box; /* Учитываем отступы в ширину */
+}
+    
+
+.product {
     border: solid white;
     border-radius: 20px;
     padding: 20px;
-    width: 320px;
-    height: 468px;
-    box-shadow: 0px 0px 21px;
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
     font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Эффект при наведении */
+    background-color: #fff; /* Белый фон карточки */
+    width: 100%; /* Карточка заполняет ширину колонки */
 }
-.images{
-    width:320px;
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.images {
+    width: 100%; /* Картинка заполняет всю ширину карточки */
     height: 275px;
+    object-fit: cover; /* Масштабирование без искажения */
+    border-radius: 10px; /* Скругление углов изображения */
 }
-.price{
+
+.price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
 }
-.boton{
+
+.boton {
     color: black;
     background-color: greenyellow;
-    border: unset;
+    border: none;
     border-radius: 7px;
-    width: 25%;
-    height: 40px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: limegreen;
 }

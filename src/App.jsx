@@ -1,6 +1,7 @@
+import { useEffect, useState } from "react";
 import { ProductCard } from "./components/ProductCard";
 
-const products = [
+const values = [
   {
     id:0,
     name:"Emperor of Mankind",
@@ -20,9 +21,19 @@ const products = [
 
 
 function App() {
+  const [loading,setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+  useEffect(() =>{
+    fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>setProducts(json))
+            .finally(()=> setLoading(false));
+  },[]);
+
   return (
-  <div class = "list">{
-    products.map((product)=>(
+  <div class = "list">
+    {loading && <div>Loading...</div>}
+    {products.map((product)=>(
       <ProductCard data = {product}/>
     ))}
   </div>
