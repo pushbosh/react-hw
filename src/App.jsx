@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ProductCard } from "./components/ProductCard";
-import 'D:/---save---/Desktop/DZ7/react-hw/src/components/ProductCard/App.css';
+import './components/ProductCard/App.css';
 
 function App() {
   const [loading,setLoading] = useState(true);
