@@ -7,7 +7,6 @@
     padding: 20px;
     box-sizing: border-box;
 }
-
 .product {
     display: flex;
     flex-direction: column; 
